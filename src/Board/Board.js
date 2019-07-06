@@ -27,7 +27,7 @@ class Board extends React.Component {
 						<div className={styles.container_input}>
 							<Input type="number" value={object.input.remove} onChange={onRemoveInputChange} />
 						</div>
-						<Button label={'Remover'} onClick={onRemoveButtonClick} />
+						<Button label={'Eliminar'} onClick={onRemoveButtonClick} />
 					</div>
 				</div>
 			</div>

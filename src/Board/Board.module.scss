@@ -4,23 +4,23 @@
 
 .container {
 	max-width: 500px;
-	border: 1px solid lightgray;
-	border-radius: 8px;
+	border: 1px solid black;
+	border-radius: 18px;
 	$box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
 	margin: 16px;
 }
 .title {
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	font-weight: 700;
 	text-align: center;
 }
 .group {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
 	flex-wrap: wrap;
 }
 .container_input {
-	padding: 0 8px 0 0;
+	padding: 2px 10px 3px 0;
 	flex: 1;
 }

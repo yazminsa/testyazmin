@@ -3,20 +3,23 @@
 }
 
 .main {
+	display: flex;
+	justify-content: center;
 }
 .default {
-	border: 1px solid lightgray;
-	font-size: .9rem;
+	align-items: center;
+	border: 2px solid lightgrey;
+	font-size: .6rem;
 	font-weight: 500;
 	line-height: normal;
 
-	height: 56px;
+	height: 45px;
 	padding: 13px 15px;
-	margin: 1px 0 0 0;
-	border-radius: 4px;
-	line-height: 24px;
+	margin: 30 px 0 0 0 0;
+	border-radius: 2px;
+	line-height: 2px;
 	outline: none;
-	color: darkslategray;
-	background: white;
+	color: green;
+	background: whitesmoke;
 	text-align: center;
 }

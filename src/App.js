@@ -7,27 +7,36 @@ import produce from 'immer/dist/immer';
 
 class App extends React.PureComponent {
 	state = {
-		family: {
-			title: 'Familia',
-			items: [ 'Walter', 'Rocio', 'Mia', 'Walter Jr' ],
-			index: 0,
-			input: {
-				add: '',
-				remove: ''
-			}
-		},
-		drinks: {
-			title: 'Bebidas',
-			items: [ 'Cerveza', 'Tequila', 'Mezcal', 'Vodka' ],
-			index: 0,
-			input: {
-				add: '',
-				remove: ''
-			}
-		},
 		friends: {
-			title: 'Amigos',
-			items: [ 'Aldo', 'Rey', 'David', 'Luis' ],
+			title: 'Friends',
+			items: [ 'Miriam', 'Dulce Maria', 'Vicente', 'Liz', 'Rosamar' ],
+			index: 0,
+			input: {
+				add: '',
+				remove: ''
+			}
+		},
+		cities: {
+			title: 'Cities',
+			items: [ 'Bangkok', 'Manila', 'Cairo', 'Ottawa', 'Hong Kong' ],
+			index: 0,
+			input: {
+				add: '',
+				remove: ''
+			}
+		},
+		continents: {
+			title: 'Continents',
+			items: [ 'Antarctica', 'Europe', 'Asia', 'America', 'Oceania' ],
+			index: 0,
+			input: {
+				add: '',
+				remove: ''
+			}
+		},
+		languajes: {
+			title: 'Languajes',
+			items: [ 'Arabic', 'Nepali', 'Catalan', 'Russian', 'Filipino' ],
 			index: 0,
 			input: {
 				add: '',
@@ -76,26 +85,12 @@ class App extends React.PureComponent {
 	};
 
 	render() {
-		const { family, drinks, friends } = this.state;
+		const { friends, cities, continents, languajes } = this.state;
 		return (
 			<div>
-				<p className={styles.title}>¡Bienvenidos al curso de programación de cómputo móvil!</p>
+				<p className={styles.title}>¡Bienvenidos al cómputo móvil - Test I!</p>
 
 				<div className={styles.container_boards}>
-					<Board
-						object={family}
-						onAddButtonClick={() => this.onAddButtonClick('family')}
-						onRemoveButtonClick={() => this.onRemoveButtonClick('family')}
-						onAddInputChange={(event) => this.onAddInputChange(event, 'family')}
-						onRemoveInputChange={(event) => this.onRemoveInputChange(event, 'family')}
-					/>
-					<Board
-						object={drinks}
-						onAddButtonClick={() => this.onAddButtonClick('drinks')}
-						onRemoveButtonClick={() => this.onRemoveButtonClick('drinks')}
-						onAddInputChange={(event) => this.onAddInputChange(event, 'drinks')}
-						onRemoveInputChange={(event) => this.onRemoveInputChange(event, 'drinks')}
-					/>
 					<Board
 						object={friends}
 						onAddButtonClick={() => this.onAddButtonClick('friends')}
@@ -103,12 +98,34 @@ class App extends React.PureComponent {
 						onAddInputChange={(event) => this.onAddInputChange(event, 'friends')}
 						onRemoveInputChange={(event) => this.onRemoveInputChange(event, 'friends')}
 					/>
+					<Board
+						object={cities}
+						onAddButtonClick={() => this.onAddButtonClick('cities')}
+						onRemoveButtonClick={() => this.onRemoveButtonClick('cities')}
+						onAddInputChange={(event) => this.onAddInputChange(event, 'cities')}
+						onRemoveInputChange={(event) => this.onRemoveInputChange(event, 'cities')}
+					/>
+					<Board
+						object={continents}
+						onAddButtonClick={() => this.onAddButtonClick('continents')}
+						onRemoveButtonClick={() => this.onRemoveButtonClick('continents')}
+						onAddInputChange={(event) => this.onAddInputChange(event, 'continents')}
+						onRemoveInputChange={(event) => this.onRemoveInputChange(event, 'continents')}
+					/>
+					<Board
+						object={languajes}
+						onAddButtonClick={() => this.onAddButtonClick('languajes')}
+						onRemoveButtonClick={() => this.onRemoveButtonClick('languajes')}
+						onAddInputChange={(event) => this.onAddInputChange(event, 'languajes')}
+						onRemoveInputChange={(event) => this.onRemoveInputChange(event, 'languajes')}
+					/>
 				</div>
 				<div className={styles.summary}>
 					<ul>
-						<li>Familia: {family.items.length}</li>
-						<li>Bebidas: {drinks.items.length}</li>
-						<li>Amigos: {friends.items.length}</li>
+						<li>Friends: {friends.items.length}</li>
+						<li>Cities: {cities.items.length}</li>
+						<li>Continents: {continents.items.length}</li>
+						<li>Languajes: {languajes.items.length}</li>
 					</ul>
 				</div>
 			</div>
